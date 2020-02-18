@@ -1,0 +1,2 @@
+include ':app', ':code-viewer'
+rootProject.name='CodeViewer'
