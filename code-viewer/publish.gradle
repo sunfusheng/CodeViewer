@@ -1,0 +1,16 @@
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+    userOrg = 'sfsheng0322'
+    groupId = 'com.sunfusheng'
+    artifactId = 'CodeViewer'
+    publishVersion = version_name
+    desc = 'Code viewer on Android.'
+    website = 'https://github.com/sunfusheng/CodeViewer'
+}
+
+tasks.withType(Javadoc) {
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
+}

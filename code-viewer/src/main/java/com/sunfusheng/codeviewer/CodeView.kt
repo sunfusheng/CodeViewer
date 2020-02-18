@@ -1,4 +1,4 @@
-package com.sunfusheng.code.viewer
+package com.sunfusheng.codeviewer
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -9,7 +9,7 @@ import android.webkit.WebView
 
 /**
  * @author sunfusheng
- * @since 2020-01-03
+ * @since 2020-02-18
  */
 @SuppressLint("SetJavaScriptEnabled")
 class CodeView @JvmOverloads constructor(
@@ -18,13 +18,13 @@ class CodeView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : WebView(context, attrs, defStyleAttr) {
 
-
     companion object {
+        const val CODE_PRETTIFY_ASSETS_PATH = "file:///android_asset/code_prettify/"
+        const val MIME_TYPE = "text/html"
         const val ENCODING = "UTF-8"
     }
 
     init {
-        val settings = settings
         settings.javaScriptEnabled = true
         settings.setAppCachePath(context.cacheDir.path)
         settings.setAppCacheEnabled(true)
@@ -36,18 +36,9 @@ class CodeView @JvmOverloads constructor(
         settings.builtInZoomControls = true
         settings.displayZoomControls = false
         setInitialScale(25)
-        setOnLongClickListener { v: View? -> false }
     }
 
-    fun loadPage(page: String?) {
-        if (page?.length == 0) return
-
-        loadDataWithBaseURL(
-            "file:///android_asset/code_prettify/",
-            page,
-            "text/html",
-            ENCODING,
-            null
-        )
+    fun loadCodeHtml(codeHtml: String?) {
+        loadDataWithBaseURL(CODE_PRETTIFY_ASSETS_PATH, codeHtml, MIME_TYPE, ENCODING, null)
     }
 }
