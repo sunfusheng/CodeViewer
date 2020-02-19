@@ -1,14 +1,10 @@
 # CodeViewer [ ![Download](https://api.bintray.com/packages/sfsheng0322/maven/CodeViewer/images/download.svg) ](https://bintray.com/sfsheng0322/maven/CodeViewer/_latestVersion)
 
-Android 端代码查看器，支持的功能：
+Android 端代码查看器，支持的功能：<br/>
 
-1、几乎加载所有格式代码，具体查看Google开源的[code-prettify](https://github.com/google/code-prettify)
-
-2、支持白天夜晚模式
-
-3、支持是否显示代码行号
-
-<br/>
+1、几乎加载所有格式代码，具体查看Google开源的[code-prettify](https://github.com/google/code-prettify)<br/>
+2、支持白天夜晚模式<br/>
+3、支持是否显示代码行号<br/>
 
 ### 效果图
 
@@ -19,8 +15,6 @@ Android 端代码查看器，支持的功能：
 ### Gradle:
 
     api 'com.sunfusheng:CodeViewer:<latest-version>'
-
-<br/>
 
 ### 使用
 
