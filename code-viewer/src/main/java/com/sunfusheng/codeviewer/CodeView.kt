@@ -32,10 +32,11 @@ class CodeView @JvmOverloads constructor(
         settings.defaultTextEncodingName = ENCODING
         settings.layoutAlgorithm = WebSettings.LayoutAlgorithm.TEXT_AUTOSIZING
         scrollBarStyle = View.SCROLLBARS_INSIDE_OVERLAY
+        settings.useWideViewPort = true
         settings.setSupportZoom(true)
         settings.builtInZoomControls = true
         settings.displayZoomControls = false
-        setInitialScale(25)
+        setInitialScale(100)
     }
 
     fun loadCodeHtml(codeHtml: String?) {

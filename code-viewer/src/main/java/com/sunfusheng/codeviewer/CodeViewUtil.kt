@@ -30,10 +30,6 @@ object CodeViewUtil {
         return if (isNightMode) NIGHT_MODE_COLOR else DAY_MODE_COLOR
     }
 
-    fun getCodeHtmlSkin(isNightMode: Boolean): String {
-        return if (isNightMode) "desert" else "prettify"
-    }
-
     fun getStringFromAssetsFile(context: Context, fileName: String): String {
         val bufferedReader =
             BufferedReader(InputStreamReader(context.assets.open(fileName), "UTF-8"))

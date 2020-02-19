@@ -14,7 +14,7 @@ object CodeHtmlGenerator {
     ): String? {
         val fileExtension = CodeViewUtil.getFileExtension(filePath)
         val backgroundColor = CodeViewUtil.getBackgroundColor(isNightMode)
-        val skin = CodeViewUtil.getCodeHtmlSkin(isNightMode)
+        val skin = if (isNightMode) "desert" else "prettify"
 
         return """
             <html>
