@@ -1,8 +1,11 @@
-# CodeViewer
+# CodeViewer [ ![Download](https://api.bintray.com/packages/sfsheng0322/maven/CodeViewer/images/download.svg) ](https://bintray.com/sfsheng0322/maven/CodeViewer/_latestVersion)
 
 Android 端代码查看器，支持的功能：
+
 1、几乎加载所有格式代码，具体查看Google开源的[code-prettify](https://github.com/google/code-prettify)
+
 2、支持白天夜晚模式
+
 3、支持是否显示代码行号
 
 <br/>
@@ -27,21 +30,18 @@ Android 端代码查看器，支持的功能：
         android:layout_height="match_parent" />
 
     val sourceCode = CodeViewUtil.getStringFromAssetsFile(context, filePath)
-
     val sourceCodeHtml = CodeHtmlGenerator.generate(filePath,sourceCode,isNightMode,showLineNums)
-
     vCodeView.loadCodeHtml(sourceCodeHtml)
-
-### 扫一扫[Fir.im](https://fir.im/GroupAdapter)二维码下载APK
-
-<img src="/resources/fir.im.png" style="width: 30%;" alt="s">
 
 <br/>
 
 ### 感谢
 
-1、Google开源的[code-prettify](https://github.com/google/code-prettify)
+1、[google/code-prettify](https://github.com/google/code-prettify)
 
+2、[ThirtyDegreesRay/OpenHub](https://github.com/ThirtyDegreesRay/OpenHub)
+
+<br/>
 
 ### 个人微信公众号
 
