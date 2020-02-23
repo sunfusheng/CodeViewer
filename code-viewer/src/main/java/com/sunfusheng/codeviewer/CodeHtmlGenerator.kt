@@ -25,7 +25,7 @@ object CodeHtmlGenerator {
                     <script src="./run_prettify.js?autoload=true&amp;skin=$skin&amp;lang=$fileExtension&amp;" defer></script>
                     <style>
                         body {background: $backgroundColor;}
-                        pre.prettyprint {background: $backgroundColor;}
+                        pre.prettyprint {background-color: $backgroundColor !important;}
                         pre.prettyprint {word-wrap: "normal";white-space: "no-wrap";}
                     </style>
                 </head>

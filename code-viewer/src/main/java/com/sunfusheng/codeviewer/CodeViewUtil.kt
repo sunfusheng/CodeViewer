@@ -11,8 +11,8 @@ import java.io.InputStreamReader
  * @since 2020-02-18
  */
 object CodeViewUtil {
-    const val DAY_MODE_COLOR = "#ffffff"
-    const val NIGHT_MODE_COLOR = "#373a41"
+    var DAY_MODE_COLOR = "#ffffff"
+    var NIGHT_MODE_COLOR = "#373a41"
 
     fun getFileExtension(filePath: String?): String? {
         return MimeTypeMap.getFileExtensionFromUrl(filePath)
