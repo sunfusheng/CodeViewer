@@ -1,5 +1,7 @@
 package com.sunfusheng.codeviewer
 
+import android.text.TextUtils
+
 /**
  * @author sunfusheng
  * @since 2020-02-18
@@ -12,6 +14,11 @@ object CodeHtmlGenerator {
         isNightMode: Boolean = false,
         showLineNums: Boolean = false
     ): String? {
+        val realSourceCode = if (TextUtils.isEmpty(sourceCode)) {
+            "No Data!"
+        } else {
+            sourceCode!!.replace("<", "&lt;").replace(">", "&gt;")
+        }
         val fileExtension = CodeViewUtil.getFileExtension(filePath)
         val backgroundColor = CodeViewUtil.getBackgroundColor(isNightMode)
         val skin = if (isNightMode) "desert" else "prettify"
@@ -32,7 +39,7 @@ object CodeHtmlGenerator {
                 <body>
                     <?prettify lang=$fileExtension linenums=$showLineNums?>
                     <pre class="prettyprint">
-${CodeViewUtil.getRealSourceCode(sourceCode)}
+$realSourceCode
                     </pre>
                 </body>
             </html>

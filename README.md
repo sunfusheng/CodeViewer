@@ -23,8 +23,11 @@ Android 端代码查看器，支持的功能：<br/>
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    // 1、从assets文件夹下加载文件的内容
     val sourceCode = CodeViewUtil.getStringFromAssetsFile(context, filePath)
+    // 2、生成html字符串
     val sourceCodeHtml = CodeHtmlGenerator.generate(filePath,sourceCode,isNightMode,showLineNums)
+    // 3、在UI线程中加载源码的Html字符串，步骤1和2应该放到子线程中
     vCodeView.loadCodeHtml(sourceCodeHtml)
 
 <br/>
