@@ -28,12 +28,12 @@ object CodeHtmlGenerator {
                 <head>
                     <meta charset="utf-8" />
                     <title>Code Viewer</title>
-                    <meta name="viewport" content="width=device-width; initial-scale=1.0;"/>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                     <script src="./run_prettify.js?autoload=true&amp;skin=$skin&amp;lang=$fileExtension&amp;" defer></script>
                     <style>
                         body {background: $backgroundColor;}
                         pre.prettyprint {background-color: $backgroundColor !important;}
-                        pre.prettyprint {word-wrap: "normal";white-space: "no-wrap";}
+                        pre.prettyprint {word-wrap: normal; white-space: no-wrap;}
                     </style>
                 </head>
                 <body>

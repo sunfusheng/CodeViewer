@@ -3,7 +3,7 @@
 Android 端代码查看器，支持的功能：<br/>
 
 1、几乎加载所有格式代码，具体查看Google开源的[code-prettify](https://github.com/google/code-prettify)<br/>
-2、支持白天夜晚模式<br/>
+2、支持白天夜晚模式，可以设置自定义颜色<br/>
 3、支持是否显示代码行号<br/>
 
 ### 效果图
