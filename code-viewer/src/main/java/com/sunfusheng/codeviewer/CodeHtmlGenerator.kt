@@ -8,22 +8,22 @@ import android.text.TextUtils
  */
 object CodeHtmlGenerator {
 
-    fun generate(
-        filePath: String?,
-        sourceCode: String?,
-        isNightMode: Boolean = false,
-        showLineNums: Boolean = false
-    ): String? {
-        val realSourceCode = if (TextUtils.isEmpty(sourceCode)) {
-            "No Data!"
-        } else {
-            sourceCode!!.replace("<", "&lt;").replace(">", "&gt;")
-        }
-        val fileExtension = CodeViewUtil.getFileExtension(filePath)
-        val backgroundColor = CodeViewUtil.getBackgroundColor(isNightMode)
-        val skin = if (isNightMode) "desert" else "prettify"
+  fun generate(
+    filePath: String?,
+    sourceCode: String?,
+    isNightMode: Boolean = false,
+    showLineNums: Boolean = false
+  ): String? {
+    val realSourceCode = if (TextUtils.isEmpty(sourceCode)) {
+      "No Data!"
+    } else {
+      sourceCode!!.replace("<", "&lt;").replace(">", "&gt;")
+    }
+    val fileExtension = CodeViewUtil.getFileExtension(filePath)
+    val backgroundColor = CodeViewUtil.getBackgroundColor(isNightMode)
+    val skin = if (isNightMode) "desert" else "prettify"
 
-        return """
+    return """
             <html>
                 <head>
                     <meta charset="utf-8" />
@@ -44,5 +44,5 @@ $realSourceCode
                 </body>
             </html>
         """
-    }
+  }
 }

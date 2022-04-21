@@ -1,2 +1,4 @@
-include ':app', ':code-viewer'
-rootProject.name='CodeViewer'
+rootProject.name = 'CodeViewer'
+
+include ':code-viewer'
+include ':app'

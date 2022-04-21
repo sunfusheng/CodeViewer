@@ -1,4 +1,4 @@
-# CodeViewer [ ![Download](https://api.bintray.com/packages/sfsheng0322/maven/CodeViewer/images/download.svg) ](https://bintray.com/sfsheng0322/maven/CodeViewer/_latestVersion)
+# CodeViewer
 
 Android 端代码查看器，支持的功能：<br/>
 
@@ -14,7 +14,7 @@ Android 端代码查看器，支持的功能：<br/>
 
 ### Gradle:
 
-    api 'com.sunfusheng:CodeViewer:<latest-version>'
+    api 'com.sunfusheng:code-viewer:1.0.0'
 
 ### 使用
 
@@ -37,18 +37,6 @@ Android 端代码查看器，支持的功能：<br/>
 1、[google/code-prettify](https://github.com/google/code-prettify)
 
 2、[ThirtyDegreesRay/OpenHub](https://github.com/ThirtyDegreesRay/OpenHub)
-
-<br/>
-
-### 个人微信公众号
-
-<img src="http://sunfusheng.com/assets/wx_gongzhonghao.png">
-
-<br/>
-
-### 请作者喝杯咖啡^_^
-
-<img src="http://sunfusheng.com/assets/wx_shoukuanma.png" >
 
 <br/>
 
